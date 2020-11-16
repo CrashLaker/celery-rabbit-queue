@@ -1,0 +1,12 @@
+version: "3"
+services:
+  redis:
+    image: redis:6.0.9
+    volumes:
+      - ./data:/data
+    ports:
+      - 6379:6379
+  rabbit:
+    image: rabbitmq:3.8
+    ports:
+      - 5672:5672
